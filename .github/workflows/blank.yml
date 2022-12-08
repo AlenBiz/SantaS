@@ -37,4 +37,4 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Run API tests
         run: |
-          postman collection run "24398506-6a8df1bd-c53a-4847-8a73-027efbb64973" -e "24398506-65da22b4-5d67-4150-a9a3-6fa956de5750"
+          postman collection run "Santa.postman_collection.json" -e "EnvSan.postman_environment.json" -d "cover.csv" -d "limit.csv" -d "Change password.csv"
